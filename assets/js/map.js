@@ -74,6 +74,10 @@ mesh.setMatrixAt(i,dummy.matrix);
 
 scene.add(mesh);
 
+// Suelo tipo mapa
+const grid = new THREE.GridHelper(2000, 50, 0x444444, 0x888888);
+scene.add(grid);
+
 // lights
 
 const dirLight1 = new THREE.DirectionalLight(0xffffff,3);
