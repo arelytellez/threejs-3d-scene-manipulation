@@ -36,8 +36,8 @@ window.innerWidth/window.innerHeight,
 camera.position.y = 10;
 
 scene = new THREE.Scene();
-scene.background = new THREE.Color(0xffffff);
-scene.fog = new THREE.Fog(0xffffff,0,750);
+scene.background = new THREE.Color(0x87CEEB); // cielo azul
+scene.fog = new THREE.Fog(0x87CEEB,0,750);
 
 const light = new THREE.HemisphereLight(0xeeeeff,0x777788,2.5);
 light.position.set(0.5,1,0.75);
