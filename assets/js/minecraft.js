@@ -131,6 +131,21 @@ function init() {
     directionalLight.position.set(1, 1, 0.5).normalize();
     scene.add(directionalLight);
 
+    // Crear el sol (esfera visible)
+    const sunGeometry = new THREE.SphereGeometry(500, 32, 32);
+
+    const sunMaterial = new THREE.MeshBasicMaterial({
+        color: 0xffff00
+    });
+
+    const sun = new THREE.Mesh(sunGeometry, sunMaterial);
+
+    // Posición del sol en el cielo
+    sun.position.set(5000, 8000, -5000);
+
+    // Agregar a la escena
+    scene.add(sun);
+
     renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setPixelRatio(window.devicePixelRatio);
     renderer.setSize(window.innerWidth, window.innerHeight);
@@ -145,6 +160,8 @@ function init() {
 
     stats = new Stats();
     container.appendChild(stats.dom);
+
+
 
     //
 
